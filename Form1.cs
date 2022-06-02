@@ -66,5 +66,16 @@ namespace Tic_Tac_Toe
                 }
             }
         }
+        private void Check()
+        {
+            if (Btn1.Text == Btn2.Text && Btn2.Text == Btn3.Text ||
+                Btn4.Text == Btn5.Text && Btn5.Text == Btn6.Text ||
+                Btn7.Text == Btn8.Text && Btn8.Text == Btn9.Text ||
+                Btn1.Text == Btn4.Text && Btn4.Text == Btn7.Text ||
+                Btn2.Text == Btn5.Text && Btn5.Text == Btn8.Text ||
+                Btn3.Text == Btn6.Text && Btn6.Text == Btn9.Text ||
+                Btn1.Text == Btn5.Text && Btn5.Text == Btn9.Text ||
+                Btn3.Text == Btn5.Text && Btn5.Text == Btn7.Text) ;
+        }
     }
 }
