@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Tic_Tac_Toe
 {
     public partial class formTictactoe : Form
     {
+        private SoundPlayer soundPlayer;
         Player currentPlayer;
         int playerWins = 0;
         int computerWins = 0;
@@ -82,10 +84,12 @@ namespace Tic_Tac_Toe
             (Btn1.Text == "X" && Btn5.Text == "X" && Btn9.Text == "X") ||//Diagonal
             (Btn3.Text == "X" && Btn5.Text == "X" && Btn7.Text == "X"))
             {
+                soundPlayer = new SoundPlayer("youwin.wav");
                 MessageBox.Show("Player wins");
                 playerWins++;
                 WON();
                 lblScore1.Text = "Player wins-" + playerWins;
+                soundPlayer.PlaySync();
 
             }
             else if (
@@ -98,10 +102,12 @@ namespace Tic_Tac_Toe
             (Btn1.Text == "O" && Btn5.Text == "O" && Btn9.Text == "O") || //Diagonal
             (Btn3.Text == "O" && Btn5.Text == "O" && Btn7.Text == "O"))
             {
+                soundPlayer = new SoundPlayer("youlose.wav");
                 MessageBox.Show("Computer wins");
                 computerWins++;
                 WON();
                 lblScore2.Text = "Computer wins-" + computerWins;
+                soundPlayer.Play();
 
             }
         counter = counter + 1;
