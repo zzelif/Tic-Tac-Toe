@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlBoard = new System.Windows.Forms.Panel();
             this.Btn1 = new System.Windows.Forms.Button();
             this.Btn2 = new System.Windows.Forms.Button();
@@ -42,6 +43,7 @@
             this.txtboxScoredisplay = new System.Windows.Forms.TextBox();
             this.lblScore1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.tmrAI = new System.Windows.Forms.Timer(this.components);
             this.pnlBoard.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,6 +73,7 @@
             this.Btn1.TabIndex = 0;
             this.Btn1.Tag = "play";
             this.Btn1.UseVisualStyleBackColor = false;
+            this.Btn1.Click += new System.EventHandler(this.buttonClick);
             // 
             // Btn2
             // 
@@ -81,6 +84,7 @@
             this.Btn2.TabIndex = 1;
             this.Btn2.Tag = "play";
             this.Btn2.UseVisualStyleBackColor = false;
+            this.Btn2.Click += new System.EventHandler(this.buttonClick);
             // 
             // Btn3
             // 
@@ -91,6 +95,7 @@
             this.Btn3.TabIndex = 2;
             this.Btn3.Tag = "play";
             this.Btn3.UseVisualStyleBackColor = false;
+            this.Btn3.Click += new System.EventHandler(this.buttonClick);
             // 
             // Btn4
             // 
@@ -101,6 +106,7 @@
             this.Btn4.TabIndex = 3;
             this.Btn4.Tag = "play";
             this.Btn4.UseVisualStyleBackColor = false;
+            this.Btn4.Click += new System.EventHandler(this.buttonClick);
             // 
             // Btn5
             // 
@@ -111,6 +117,7 @@
             this.Btn5.TabIndex = 4;
             this.Btn5.Tag = "play";
             this.Btn5.UseVisualStyleBackColor = false;
+            this.Btn5.Click += new System.EventHandler(this.buttonClick);
             // 
             // Btn6
             // 
@@ -121,6 +128,7 @@
             this.Btn6.TabIndex = 5;
             this.Btn6.Tag = "play";
             this.Btn6.UseVisualStyleBackColor = false;
+            this.Btn6.Click += new System.EventHandler(this.buttonClick);
             // 
             // Btn7
             // 
@@ -131,6 +139,7 @@
             this.Btn7.TabIndex = 6;
             this.Btn7.Tag = "play";
             this.Btn7.UseVisualStyleBackColor = false;
+            this.Btn7.Click += new System.EventHandler(this.buttonClick);
             // 
             // Btn8
             // 
@@ -141,6 +150,7 @@
             this.Btn8.TabIndex = 7;
             this.Btn8.Tag = "play";
             this.Btn8.UseVisualStyleBackColor = false;
+            this.Btn8.Click += new System.EventHandler(this.buttonClick);
             // 
             // Btn9
             // 
@@ -151,6 +161,7 @@
             this.Btn9.TabIndex = 8;
             this.Btn9.Tag = "play";
             this.Btn9.UseVisualStyleBackColor = false;
+            this.Btn9.Click += new System.EventHandler(this.buttonClick);
             // 
             // rstButton
             // 
@@ -193,6 +204,10 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "?";
             // 
+            // tmrAI
+            // 
+            this.tmrAI.Interval = 250;
+            // 
             // formTictactoe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -230,6 +245,7 @@
         private System.Windows.Forms.TextBox txtboxScoredisplay;
         private System.Windows.Forms.Label lblScore1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Timer tmrAI;
     }
 }
 

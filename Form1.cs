@@ -12,9 +12,27 @@ namespace Tic_Tac_Toe
 {
     public partial class formTictactoe : Form
     {
+        Player currentPlayer;
+
         public formTictactoe()
         {
             InitializeComponent();
+        }
+        public enum Player
+        {
+            X,
+            O
+        }
+
+        private void buttonClick(object sender, EventArgs e)
+        {
+            var button = (Button)sender;
+            currentPlayer = Player.X;
+            button.Text = currentPlayer.ToString();
+            button.Enabled = false;
+            button.BackColor = Color.LightGreen;
+            Check();
+            tmrAI.Start();
         }
     }
 }
