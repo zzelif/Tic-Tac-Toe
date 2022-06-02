@@ -13,7 +13,6 @@ namespace Tic_Tac_Toe
     public partial class formTictactoe : Form
     {
         Player currentPlayer;
-
         public formTictactoe()
         {
             InitializeComponent();
@@ -37,12 +36,35 @@ namespace Tic_Tac_Toe
 
         private void playAi(object sender, EventArgs e)
         {
-
+            foreach (Control x in this.Controls)
+            {
+                if (x is Button && x.Text == "" && x.Enabled)
+                {
+                    x.Enabled = false;
+                    currentPlayer = Player.O;
+                    x.Text = currentPlayer.ToString();
+                    x.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+                    Check();
+                    break;
+                }
+                else
+                {
+                    tmrAI.Stop();
+                }
+            }
         }
 
         private void resetGame(object sender, EventArgs e)
         {
-
+            foreach (Control x in this.Controls)
+            {
+                if (x is Button && x.Tag == "play")
+                {
+                    ((Button)x).Enabled = false;
+                    ((Button)x).Text = "";
+                    ((Button)x).BackColor = default(Color);
+                }
+            }
         }
     }
 }
