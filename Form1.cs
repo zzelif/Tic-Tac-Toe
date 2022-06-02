@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Media;
+using System.Windows.Forms;
 
 namespace Tic_Tac_Toe
 {
@@ -28,16 +22,15 @@ namespace Tic_Tac_Toe
             X,
             O
         }
-
         private void buttonClick(object sender, EventArgs e)
         {
             var button = (Button)sender;
             currentPlayer = Player.X;
             button.Text = currentPlayer.ToString();
             button.Enabled = false;
-            button.BackColor = Color.LightGreen;
+            button.BackColor = System.Drawing.Color.LightGreen;
             Check();
-            tmrAI.Start();
+            timerAi.Start();
         }
 
         private void playAI(object sender, EventArgs e)
@@ -50,13 +43,12 @@ namespace Tic_Tac_Toe
                     currentPlayer = Player.O;
                     x.Text = currentPlayer.ToString();
                     x.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-                    tmrAI.Stop();
                     Check();
                     break;
                 }
                 else
                 {
-                    tmrAI.Stop();
+                    timerAi.Stop();
                 }
             }
         }
@@ -65,14 +57,17 @@ namespace Tic_Tac_Toe
         {
             foreach (Control x in this.Controls)
             {
+
                 if (x is Button && x.Tag == "play")
                 {
-                    ((Button)x).Enabled = false;
+                    ((Button)x).Enabled = true;
                     ((Button)x).Text = "";
                     ((Button)x).BackColor = default(Color);
                 }
+
             }
         }
+
         private void Check()
         {
             if (
@@ -86,12 +81,11 @@ namespace Tic_Tac_Toe
             Btn3.Text == "X" && Btn5.Text == "X" && Btn7.Text == "X")
             {
                 soundPlayer = new SoundPlayer("youwin.wav");
-                MessageBox.Show("Player wins");
+                MessageBox.Show("Player Wins");
                 playerWins++;
                 WON();
-                lblScore1.Text = "Player wins-" + playerWins;
+                lblScore1.Text = "Player Wins- " + playerWins;
                 soundPlayer.PlaySync();
-
             }
             else if (
             Btn1.Text == "O" && Btn2.Text == "O" && Btn3.Text == "O" ||//Horizontal
@@ -104,10 +98,10 @@ namespace Tic_Tac_Toe
             Btn3.Text == "O" && Btn5.Text == "O" && Btn7.Text == "O")
             {
                 soundPlayer = new SoundPlayer("youlose.wav");
-                MessageBox.Show("Computer wins");
+                MessageBox.Show("Computer Wins");
                 computerWins++;
                 WON();
-                lblScore2.Text = "Computer wins-" + computerWins;
+                lblScore2.Text = "Computer Wins- " + computerWins;
                 soundPlayer.Play();
             }
             counter = counter + 1;
@@ -115,20 +109,21 @@ namespace Tic_Tac_Toe
             {
                 MessageBox.Show("Draw");
                 counter = 0;
-
             }
-
         }
 
         private void WON()
         {
             foreach (Control x in this.Controls)
             {
+
                 if (x is Button && x.Tag == "play")
                 {
                     ((Button)x).Enabled = false;
                     ((Button)x).BackColor = default(Color);
+
                 }
+
             }
         }
     }
