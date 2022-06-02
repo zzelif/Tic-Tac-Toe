@@ -34,5 +34,15 @@ namespace Tic_Tac_Toe
             Check();
             tmrAI.Start();
         }
+
+        private void playAi(object sender, EventArgs e)
+        {
+
+        }
+
+        private void resetGame(object sender, EventArgs e)
+        {
+
+        }
     }
 }

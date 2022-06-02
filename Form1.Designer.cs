@@ -172,6 +172,7 @@
             this.rstButton.TabIndex = 1;
             this.rstButton.Text = "Reset";
             this.rstButton.UseVisualStyleBackColor = true;
+            this.rstButton.Click += new System.EventHandler(this.resetGame);
             // 
             // txtboxScoredisplay
             // 
@@ -207,6 +208,7 @@
             // tmrAI
             // 
             this.tmrAI.Interval = 250;
+            this.tmrAI.Tick += new System.EventHandler(this.playAi);
             // 
             // formTictactoe
             // 
