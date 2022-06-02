@@ -13,6 +13,10 @@ namespace Tic_Tac_Toe
     public partial class formTictactoe : Form
     {
         Player currentPlayer;
+        int playerWins = 0;
+        int computerWins = 0;
+        int counter = 0;
+
         public formTictactoe()
         {
             InitializeComponent();
@@ -68,14 +72,39 @@ namespace Tic_Tac_Toe
         }
         private void Check()
         {
-            if (Btn1.Text == Btn2.Text && Btn2.Text == Btn3.Text ||
-                Btn4.Text == Btn5.Text && Btn5.Text == Btn6.Text ||
-                Btn7.Text == Btn8.Text && Btn8.Text == Btn9.Text ||
-                Btn1.Text == Btn4.Text && Btn4.Text == Btn7.Text ||
-                Btn2.Text == Btn5.Text && Btn5.Text == Btn8.Text ||
-                Btn3.Text == Btn6.Text && Btn6.Text == Btn9.Text ||
-                Btn1.Text == Btn5.Text && Btn5.Text == Btn9.Text ||
-                Btn3.Text == Btn5.Text && Btn5.Text == Btn7.Text) ;
+            if (
+        (Btn1.Text == "X" && Btn2.Text == "X" && Btn3.Text == "X") ||//Horizontal
+        (Btn4.Text == "X" && Btn5.Text == "X" && Btn6.Text == "X") ||
+        (Btn7.Text == "X" && Btn8.Text == "X" && Btn9.Text == "X") ||
+        (Btn1.Text == "X" && Btn4.Text == "X" && Btn7.Text == "X") ||//Vertical)
+        (Btn2.Text == "X" && Btn5.Text == "X" && Btn8.Text == "X") ||
+        (Btn3.Text == "X" && Btn6.Text == "X" && Btn9.Text == "X") ||
+        (Btn1.Text == "X" && Btn5.Text == "X" && Btn9.Text == "X") ||//Diagonal
+        (Btn3.Text == "X" && Btn5.Text == "X" && Btn7.Text == "X"))
+            {
+                MessageBox.Show("Player wins");
+                playerWins++;
+                WON();
+                lblScore1.Text = "Player wins-" + playerWins;
+
+            }
+            else if (
+        (Btn1.Text == "O" && Btn2.Text == "O" && Btn3.Text == "O") ||//Horizontal
+        (Btn4.Text == "O" && Btn5.Text == "O" && Btn6.Text == "O") ||
+        (Btn7.Text == "O" && Btn8.Text == "O" && Btn9.Text == "O") ||
+        (Btn1.Text == "O" && Btn4.Text == "O" && Btn7.Text == "O") ||//Vertical
+        (Btn2.Text == "O" && Btn5.Text == "O" && Btn8.Text == "O") ||
+        (Btn3.Text == "O" && Btn6.Text == "O" && Btn9.Text == "O") ||
+        (Btn1.Text == "O" && Btn5.Text == "O" && Btn9.Text == "O") || //Diagonal
+        (Btn3.Text == "O" && Btn5.Text == "O" && Btn7.Text == "O"))
+            {
+                MessageBox.Show("Computer wins");
+                computerWins++;
+                WON();
+                lblScore2.Text = "Computer wins-" + computerWins;
+
+            }
         }
+
     }
 }

@@ -42,7 +42,7 @@
             this.rstButton = new System.Windows.Forms.Button();
             this.txtboxScoredisplay = new System.Windows.Forms.TextBox();
             this.lblScore1 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblScore2 = new System.Windows.Forms.Label();
             this.tmrAI = new System.Windows.Forms.Timer(this.components);
             this.pnlBoard.SuspendLayout();
             this.SuspendLayout();
@@ -194,16 +194,16 @@
             this.lblScore1.TabIndex = 3;
             this.lblScore1.Text = "?";
             // 
-            // label1
+            // lblScore2
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(675, 191);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(24, 25);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "?";
+            this.lblScore2.AutoSize = true;
+            this.lblScore2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblScore2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore2.Location = new System.Drawing.Point(675, 191);
+            this.lblScore2.Name = "lblScore2";
+            this.lblScore2.Size = new System.Drawing.Size(24, 25);
+            this.lblScore2.TabIndex = 4;
+            this.lblScore2.Text = "?";
             // 
             // tmrAI
             // 
@@ -216,7 +216,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Tic_Tac_Toe.Properties.Resources.bgtictac;
             this.ClientSize = new System.Drawing.Size(957, 595);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblScore2);
             this.Controls.Add(this.lblScore1);
             this.Controls.Add(this.txtboxScoredisplay);
             this.Controls.Add(this.rstButton);
@@ -246,7 +246,7 @@
         private System.Windows.Forms.Button rstButton;
         private System.Windows.Forms.TextBox txtboxScoredisplay;
         private System.Windows.Forms.Label lblScore1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblScore2;
         private System.Windows.Forms.Timer tmrAI;
     }
 }
