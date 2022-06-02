@@ -208,7 +208,7 @@
             // tmrAI
             // 
             this.tmrAI.Interval = 250;
-            this.tmrAI.Tick += new System.EventHandler(this.playAi);
+            this.tmrAI.Tick += new System.EventHandler(this.playAI);
             // 
             // formTictactoe
             // 
