@@ -38,6 +38,10 @@
             this.Btn7 = new System.Windows.Forms.Button();
             this.Btn8 = new System.Windows.Forms.Button();
             this.Btn9 = new System.Windows.Forms.Button();
+            this.rstButton = new System.Windows.Forms.Button();
+            this.txtboxScoredisplay = new System.Windows.Forms.TextBox();
+            this.lblScore1 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlBoard.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -148,12 +152,57 @@
             this.Btn9.Tag = "play";
             this.Btn9.UseVisualStyleBackColor = false;
             // 
+            // rstButton
+            // 
+            this.rstButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rstButton.Location = new System.Drawing.Point(259, 528);
+            this.rstButton.Name = "rstButton";
+            this.rstButton.Size = new System.Drawing.Size(150, 55);
+            this.rstButton.TabIndex = 1;
+            this.rstButton.Text = "Reset";
+            this.rstButton.UseVisualStyleBackColor = true;
+            // 
+            // txtboxScoredisplay
+            // 
+            this.txtboxScoredisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxScoredisplay.Location = new System.Drawing.Point(770, 45);
+            this.txtboxScoredisplay.Name = "txtboxScoredisplay";
+            this.txtboxScoredisplay.Size = new System.Drawing.Size(77, 34);
+            this.txtboxScoredisplay.TabIndex = 2;
+            this.txtboxScoredisplay.Text = "Score";
+            // 
+            // lblScore1
+            // 
+            this.lblScore1.AutoSize = true;
+            this.lblScore1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblScore1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore1.Location = new System.Drawing.Point(675, 140);
+            this.lblScore1.Name = "lblScore1";
+            this.lblScore1.Size = new System.Drawing.Size(24, 25);
+            this.lblScore1.TabIndex = 3;
+            this.lblScore1.Text = "?";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(675, 191);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(24, 25);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "?";
+            // 
             // formTictactoe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Tic_Tac_Toe.Properties.Resources.bgtictac;
-            this.ClientSize = new System.Drawing.Size(956, 585);
+            this.ClientSize = new System.Drawing.Size(957, 595);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblScore1);
+            this.Controls.Add(this.txtboxScoredisplay);
+            this.Controls.Add(this.rstButton);
             this.Controls.Add(this.pnlBoard);
             this.Name = "formTictactoe";
             this.ShowIcon = false;
@@ -161,6 +210,7 @@
             this.Text = "Versus Bot";
             this.pnlBoard.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -176,6 +226,10 @@
         private System.Windows.Forms.Button Btn3;
         private System.Windows.Forms.Button Btn2;
         private System.Windows.Forms.Button Btn1;
+        private System.Windows.Forms.Button rstButton;
+        private System.Windows.Forms.TextBox txtboxScoredisplay;
+        private System.Windows.Forms.Label lblScore1;
+        private System.Windows.Forms.Label label1;
     }
 }
 
